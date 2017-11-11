@@ -10,6 +10,16 @@
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 <body>
-  <app-root></app-root>
+<app-root></app-root>
 </body>
+<script>
+  (function ($) {
+    $(function () {
+
+      $('.button-collapse').sideNav();
+      $('.parallax').parallax();
+
+    }); // end of document ready
+  })(jQuery); // end of jQuery name space
+</script>
 </html>

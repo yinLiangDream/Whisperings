@@ -1,10 +1,104 @@
-<nav class="grey darken-3" role="navigation">
+<nav class="grey darken-3 col s12 m12 l12" role="navigation">
   <div class="nav-wrapper container">
-    <a id="logo-container" href="#" class="brand-logo">轻语</a>
-    <ul class="right hide-on-med-and-down">
-      <li><a href="#" class="waves-effect waves-light btn teal lighten-2">注册</a></li>
-      <li><a href="#" class="waves-effect waves-light btn blue lighten-3">登录</a></li>
-    </ul>
+    <div class="absolute logoWidth">
+      <a id="logo-container" href="#" class="brand-logo waves-effect waves-light">轻语</a>
+    </div>
+    <div class="inline-block left secNavBar hide-on-med-and-down">
+      <a id="find" href="/discovery" class="waves-effect waves-light btn-flat white-text text-darken-2">发现</a>
+      <a id="new" href="/mood" class="waves-effect waves-light btn-flat white-text text-darken-2">心情条</a>
+      <a id="play" href="/time" class="waves-effect waves-light btn-flat white-text text-darken-2">时光馆</a>
+    </div>
+    <div class="click-to-toggle inline-block fixed-action-btn">
+      <a class="btn-floating btn-large red">
+        <i class="material-icons moreIcon waves-light waves-effect" id="more">bubble_chart</i>
+      </a>
+      <ul>
+        <li><a class="btn-floating red"><i class="material-icons">insert_chart</i></a></li>
+        <li><a class="btn-floating yellow darken-1"><i class="material-icons">format_quote</i></a></li>
+        <li><a class="btn-floating green"><i class="material-icons">publish</i></a></li>
+        <li><a class="btn-floating blue"><i class="material-icons">attach_file</i></a></li>
+      </ul>
+    </div>
+    <div class="inline-block right">
+      <ul class="right hide-on-med-and-down ">
+        <li><a id="register" class="waves-effect waves-light btn red lighten-4 modal-trigger" href="#registerModal">注册</a></li>
+        <li><a id="logIn" class="waves-effect waves-light btn blue lighten-3 modal-trigger" href="#logInModel">登录</a></li>
+      </ul>
+    </div>
     <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
   </div>
 </nav>
+<!-- 注册 modal -->
+<div id="registerModal" class="modal modal-fixed-footer">
+  <div class="modal-content">
+    <h4>注册</h4>
+    <div class="container">
+      <div class="row">
+        <form class="col s12">
+          <div class="row">
+            <div class="input-field col s12">
+              <input id="username" type="text" class="validate"  data-length="24">
+              <label for="username">用户名</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <input id="password" type="password" class="validate" data-length="24">
+              <label for="password">密码</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <input id="passwordTwo" type="password" class="validate" data-length="24">
+              <label for="passwordTwo" data-error=""> 再次输入密码</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <input id="userEmail" type="email" class="validate">
+              <label for="userEmail" data-error="邮箱格式不正确">邮箱</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12" >
+              <input id="nickname" type="text" class="validate" data-length="16">
+              <label for="nickname">昵称</label>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <a href="#" class="modal-action modal-close waves-effect waves-green btn-flat">注册</a>
+    <a href="javascript:void(0)" class="modal-action modal-close waves-effect waves-green btn-flat">取消</a>
+  </div>
+</div>
+<!-- 登录 modal -->
+<div id="logInModel" class="modal modal-fixed-footer">
+  <div class="modal-content">
+    <h4>登录</h4>
+    <div class="container">
+      <div class="row">
+        <form class="col s12">
+          <div class="row">
+            <div class="input-field col s12">
+              <input id="LoginUsername" type="text" class="validate">
+              <label for="LoginUsername">用户名</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <input id="LoginPassword" type="password" class="validate">
+              <label for="LoginPassword">密码</label>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <a href="#" class="modal-action modal-close waves-effect waves-green btn-flat">登录</a>
+    <a href="javascript:void(0)" class="modal-action modal-close waves-effect waves-green btn-flat">取消</a>
+  </div>
+</div>
